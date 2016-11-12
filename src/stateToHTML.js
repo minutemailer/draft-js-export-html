@@ -51,11 +51,11 @@ const BREAK = '<br>';
 const DATA_ATTRIBUTE = /^data-([a-z0-9-]+)$/;
 
 const DEFAULT_STYLE_MAP = {
-  [BOLD]: {element: 'strong'},
+  [BOLD]: {element: 'b'},
   [CODE]: {element: 'code'},
-  [ITALIC]: {element: 'em'},
-  [STRIKETHROUGH]: {element: 'del'},
-  [UNDERLINE]: {element: 'ins'},
+  [ITALIC]: {element: 'i'},
+  [STRIKETHROUGH]: {element: 'strike'},
+  [UNDERLINE]: {element: 'u'},
 };
 
 // Order: inner-most style to outer-most.
@@ -128,7 +128,7 @@ function getTags(blockType: string): Array<string> {
     case BLOCK_TYPE.ATOMIC:
       return ['figure'];
     default:
-      return ['p'];
+      return ['div'];
   }
 }
 
